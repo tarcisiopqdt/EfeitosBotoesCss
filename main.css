@@ -1,0 +1,78 @@
+@keyframes bounce{
+    0%, 20%, 60%, 100%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40%{
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    80%{
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+}
+
+.botoes{
+    text-align: center;
+    margin-top: 50px;
+}
+.efeito{
+    border:none;
+    color:whitesmoke;
+    padding:20px;
+    margin: 20px;
+    font-size: 24px;
+    border-radius: 50px;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.efeito-1{
+    background: #009c3d;
+    
+}
+.efeito-1:hover{
+    background-color: rgba(0, 0, 0, 0);
+    color: #009c3d;
+    box-shadow: inset 0 0 0 3px #009c3d;
+}
+
+.efeito-2{
+    background: #f18f01;
+
+}
+
+.efeito-2:hover{
+    animation: bounce 1s; /* chama o keyframe criado */
+}
+
+.efeito-3{
+    background: #376693;
+    transform-style: preserve-3d;
+
+}
+
+.efeito-3:after{
+
+    top: -100%;
+    left: 0px;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    background: #3a9999;
+    border-radius: 50px;
+    box-sizing: border-box;
+    content: "Mudou!";
+    transform-origin: left bottom;
+    transform: rotateX(90deg);
+
+}
+
+.efeito-3:hover{
+    transform-origin: center bottom;
+    transform: rotateX(-90deg) translateY(100%);
+}
